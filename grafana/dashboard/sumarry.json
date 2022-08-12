@@ -57,7 +57,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c4RUGFm4z"
+        "uid": "JzJG2HmVz"
       },
       "description": "",
       "fieldConfig": {
@@ -106,7 +106,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c4RUGFm4z"
+            "uid": "JzJG2HmVz"
           },
           "editorMode": "builder",
           "expr": "vanus_controller_eventbus_number_total{job=\"vanus\"}",
@@ -120,7 +120,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c4RUGFm4z"
+        "uid": "JzJG2HmVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -168,7 +168,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c4RUGFm4z"
+            "uid": "JzJG2HmVz"
           },
           "expr": "vanus_controller_eventlog_number_total",
           "refId": "A"
@@ -180,7 +180,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c4RUGFm4z"
+        "uid": "JzJG2HmVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -251,7 +251,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c4RUGFm4z"
+            "uid": "JzJG2HmVz"
           },
           "expr": "sum(vanus_controller_segment_number_per_eventbus_total)",
           "refId": "A"
@@ -263,7 +263,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c4RUGFm4z"
+        "uid": "JzJG2HmVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -337,7 +337,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c4RUGFm4z"
+            "uid": "JzJG2HmVz"
           },
           "expr": "vanus_controller_segment_creation_runtime",
           "refId": "A"
@@ -349,7 +349,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c4RUGFm4z"
+        "uid": "JzJG2HmVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -423,7 +423,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c4RUGFm4z"
+            "uid": "JzJG2HmVz"
           },
           "expr": "vanus_controller_deleted_segment_number_runtime",
           "refId": "A"

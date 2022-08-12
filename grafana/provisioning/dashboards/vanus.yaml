@@ -5,4 +5,4 @@ providers:
     folder: vanus # The folder where to place the dashboards
     type: file
     options:
-      path: /etc/grafana/dashboards
+      path: /home/grafana/dashboard

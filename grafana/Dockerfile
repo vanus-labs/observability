@@ -1,8 +1,12 @@
 FROM grafana/grafana:9.0.7
 
-COPY ./provisioning /etc/grafana/provisioning
-COPY ./dashboards /etc/grafana/dashboards
+MAINTAINER wenfeng@linkall.com
 
-ENV GF_PATHS_PROVISIONING /etc/grafana/provisioning
+WORKDIR /home/grafana
 
-ENTRYPOINT ["/run.sh"]
+COPY ./provisioning /home/grafana/provisioning
+COPY ./dashboard /home/grafana/dashboard
+COPY ./plugins /home/grafana/provisioning/plugins
+COPY ./notifiers /home/grafana/provisioning/notifiers
+
+ENV GF_PATHS_PROVISIONING "/home/grafana/provisioning"
