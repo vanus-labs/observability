@@ -1237,10 +1237,7 @@
   "refresh": "",
   "schemaVersion": 36,
   "style": "dark",
-  "tags": [
-    "go",
-    "golang"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
@@ -1311,6 +1308,6 @@
   "timezone": "",
   "title": "Controller",
   "uid": "EzxEEOm4z",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }
