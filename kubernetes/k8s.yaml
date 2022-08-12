@@ -35,7 +35,7 @@ data:
           - targets: ['vanus-controller-0.vanus-controller.vanus.svc:2112',
                       'vanus-controller-1.vanus-controller.vanus.svc:2112',
                       'vanus-controller-2.vanus-controller.vanus.svc:2112']
-      - job_name: 'vanus'
+      - job_name: 'node'
         static_configs:
           - targets: ['vanus-controller-0.vanus-controller.vanus.svc:9100',
                       'vanus-controller-1.vanus-controller.vanus.svc:9100',
