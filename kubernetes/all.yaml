@@ -135,7 +135,7 @@ spec:
         app: vanus-grafana
     spec:
       containers:
-      - image: grafana/grafana
+      - image: public.ecr.aws/vanus/grafana:v9.0.7
         imagePullPolicy: Always
         name: grafana
         ports:

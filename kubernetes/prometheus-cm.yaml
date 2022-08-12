@@ -1,3 +1,4 @@
+# https://github.com/bibinwilson/kubernetes-prometheus/blob/master/config-map.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
