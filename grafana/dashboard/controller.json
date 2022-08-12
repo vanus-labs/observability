@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 4,
+  "id": 6,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -576,7 +576,6 @@
         "type": "prometheus",
         "uid": "c4RUGFm4z"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -592,7 +591,7 @@
         "y": 11
       },
       "hiddenSeries": false,
-      "id": 18,
+      "id": 36,
       "legend": {
         "avg": false,
         "current": false,
@@ -601,30 +600,6 @@
         "show": true,
         "total": false,
         "values": false
-      },
-      "libraryPanel": {
-        "description": "",
-        "meta": {
-          "connectedDashboards": 1,
-          "created": "2022-08-12T05:13:12Z",
-          "createdBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          },
-          "folderName": "General",
-          "folderUid": "",
-          "updated": "2022-08-12T05:13:12Z",
-          "updatedBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          }
-        },
-        "name": "Memory in Off-Heap",
-        "type": "graph",
-        "uid": "gaNQeOiVk",
-        "version": 1
       },
       "lines": true,
       "linewidth": 1,
@@ -1301,13 +1276,13 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Controller",
   "uid": "EzxEEOm4z",
-  "version": 8,
+  "version": 6,
   "weekStart": ""
 }
