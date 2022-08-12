@@ -57,7 +57,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "JzJG2HmVz"
+        "uid": "D7xJ3dm4k"
       },
       "description": "",
       "fieldConfig": {
@@ -72,7 +72,7 @@
               },
               {
                 "color": "red",
-                "value": 80
+                "value": 1000
               }
             ]
           },
@@ -101,15 +101,15 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.7",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "JzJG2HmVz"
+            "uid": "D7xJ3dm4k"
           },
-          "editorMode": "explain",
-          "expr": "vanus_controller_eventbus_number_total",
+          "editorMode": "builder",
+          "expr": "vanus_controller_eventbus_number_total{job=\"vanus\"}",
           "range": true,
           "refId": "A"
         }
@@ -120,7 +120,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "JzJG2HmVz"
+        "uid": "D7xJ3dm4k"
       },
       "fieldConfig": {
         "defaults": {
@@ -163,12 +163,12 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.7",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "JzJG2HmVz"
+            "uid": "D7xJ3dm4k"
           },
           "expr": "vanus_controller_eventlog_number_total",
           "refId": "A"
@@ -180,7 +180,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "JzJG2HmVz"
+        "uid": "D7xJ3dm4k"
       },
       "fieldConfig": {
         "defaults": {
@@ -251,7 +251,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "JzJG2HmVz"
+            "uid": "D7xJ3dm4k"
           },
           "expr": "sum(vanus_controller_segment_number_per_eventbus_total)",
           "refId": "A"
@@ -263,7 +263,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "owiqH4m4k"
+        "uid": "D7xJ3dm4k"
       },
       "fieldConfig": {
         "defaults": {
@@ -337,7 +337,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "owiqH4m4k"
+            "uid": "D7xJ3dm4k"
           },
           "expr": "vanus_controller_segment_creation_runtime",
           "refId": "A"
@@ -349,7 +349,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "owiqH4m4k"
+        "uid": "D7xJ3dm4k"
       },
       "fieldConfig": {
         "defaults": {
@@ -423,7 +423,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "owiqH4m4k"
+            "uid": "D7xJ3dm4k"
           },
           "expr": "vanus_controller_deleted_segment_number_runtime",
           "refId": "A"
@@ -500,6 +500,6 @@
   "timezone": "",
   "title": "Summary",
   "uid": "0cFmtVmVk",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }
