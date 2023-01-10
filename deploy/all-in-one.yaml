@@ -1,19 +1,14 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: monitoring
----
-apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: prometheus
-  namespace: monitoring
+  namespace: vanus
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: prometheus
-  namespace: monitoring
+  namespace: vanus
 rules:
 - apiGroups:
   - ""
@@ -51,7 +46,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: prometheus
-  namespace: monitoring
+  namespace: vanus
 ---
 apiVersion: v1
 data:
@@ -85,13 +80,13 @@ data:
 kind: ConfigMap
 metadata:
   name: prometheus-config
-  namespace: monitoring
+  namespace: vanus
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: grafana
-  namespace: monitoring
+  namespace: vanus
 spec:
   ports:
   - port: 3000
@@ -108,7 +103,7 @@ metadata:
     prometheus.io/port: "9090"
     prometheus.io/scrape: "true"
   name: prometheus
-  namespace: monitoring
+  namespace: vanus
 spec:
   ports:
   - name: prometheus
@@ -124,7 +119,7 @@ metadata:
   labels:
     app: grafana
   name: grafana
-  namespace: monitoring
+  namespace: vanus
 spec:
   selector:
     matchLabels:
@@ -136,7 +131,7 @@ spec:
     spec:
       containers:
       - image: public.ecr.aws/vanus/observability/grafana:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
           initialDelaySeconds: 30
@@ -181,7 +176,7 @@ metadata:
   labels:
     app: prometheus
   name: prometheus
-  namespace: monitoring
+  namespace: vanus
 spec:
   replicas: 1
   selector:
