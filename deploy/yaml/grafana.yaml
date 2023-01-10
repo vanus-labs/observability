@@ -11,8 +11,7 @@ spec:
       targetPort: http-grafana
   selector:
     app: grafana
-  sessionAffinity: None
-  type: LoadBalancer
+  type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,7 +35,7 @@ spec:
           - 0
       containers:
         - name: grafana
-          image: grafana/grafana:9.1.0
+          image: public.ecr.aws/vanus/observability/grafana:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
