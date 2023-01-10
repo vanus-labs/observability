@@ -21,15 +21,28 @@
       }
     ]
   },
-  "description": "Golang Application Runtime metrics",
-  "editable": false,
+  "description": "Process status published by Go Prometheus client library, e.g. memory used, fds open, GC details",
+  "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": 10826,
+  "gnetId": 6671,
   "graphTooltip": 0,
-  "id": 19,
+  "id": 9,
   "links": [],
   "liveNow": false,
   "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "panels": [],
+      "title": "Memory",
+      "type": "row"
+    },
     {
       "aliasColors": {},
       "bars": false,
@@ -51,7 +64,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 26,
@@ -72,7 +85,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -223,7 +236,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 12,
@@ -244,7 +257,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -360,7 +373,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 9
       },
       "hiddenSeries": false,
       "id": 24,
@@ -381,7 +394,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -464,7 +477,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 9
       },
       "hiddenSeries": false,
       "id": 16,
@@ -485,7 +498,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -557,7 +570,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 22,
@@ -580,7 +593,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -653,7 +666,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 20,
@@ -674,7 +687,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -747,7 +760,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 24
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 18,
@@ -768,7 +781,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -840,100 +853,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 24
-      },
-      "hiddenSeries": false,
-      "id": 8,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "9.1.0",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "2NGL3Ah4z"
-          },
-          "expr": "go_goroutines{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "go_goroutines - {{pod_name}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeRegions": [],
-      "title": "Goroutines",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        },
-        {
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "2NGL3Ah4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 32
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 14,
@@ -954,7 +874,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "pointradius": 1,
       "points": true,
       "renderer": "flot",
@@ -1006,6 +926,19 @@
       }
     },
     {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 10,
+      "panels": [],
+      "title": "Processes",
+      "type": "row"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -1014,42 +947,135 @@
         "type": "prometheus",
         "uid": "2NGL3Ah4z"
       },
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
+      "editable": true,
+      "error": false,
       "fill": 1,
       "fillGradient": 0,
+      "grid": {},
       "gridPos": {
-        "h": 8,
+        "h": 7,
         "w": 12,
-        "x": 12,
-        "y": 32
+        "x": 0,
+        "y": 34
       },
       "hiddenSeries": false,
-      "id": 4,
+      "id": 7,
+      "isNew": true,
       "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "max": false,
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
         "min": false,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
-      "linewidth": 1,
+      "linewidth": 2,
       "links": [],
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "options": {
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.0",
-      "pointradius": 2,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "go_goroutines{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_goroutines - {{pod_name}}",
+          "metric": "go_goroutines",
+          "refId": "A",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Goroutines",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 34
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
@@ -1064,18 +1090,21 @@
           },
           "expr": "go_gc_duration_seconds{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
           "format": "time_series",
-          "intervalFactor": 1,
+          "intervalFactor": 2,
           "legendFormat": "go_gc_duration_seconds - {{pod_name}}",
-          "refId": "A"
+          "metric": "go_gc_duration_seconds",
+          "refId": "A",
+          "step": 4
         }
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "GC duration quantile",
+      "title": "GC duration quantiles",
       "tooltip": {
+        "msResolution": false,
         "shared": true,
         "sort": 0,
-        "value_type": "individual"
+        "value_type": "cumulative"
       },
       "type": "graph",
       "xaxis": {
@@ -1085,7 +1114,722 @@
       },
       "yaxes": [
         {
-          "format": "ms",
+          "format": "s",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 41
+      },
+      "hiddenSeries": false,
+      "id": 1,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "resident",
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "process_resident_memory_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_resident_memory_bytes - {{pod_name}}",
+          "metric": "process_resident_memory_bytes",
+          "range": true,
+          "refId": "A",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "process_virtual_memory_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_virtual_memory_bytes - {{pod_name}}",
+          "metric": "process_virtual_memory_bytes",
+          "range": true,
+          "refId": "B",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "process memory",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 41
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "resident",
+          "yaxis": 1
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "rate(process_resident_memory_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_resident_memory_bytes - {{pod_name}}",
+          "metric": "process_resident_memory_bytes",
+          "range": true,
+          "refId": "A",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "deriv(process_virtual_memory_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_virtual_memory_bytes - {{pod_name}}",
+          "metric": "process_virtual_memory_bytes",
+          "range": true,
+          "refId": "B",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "process memory deriv",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 49
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "alloc rate",
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "go_memstats_alloc_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_alloc_bytes - {{pod_name}}",
+          "metric": "go_memstats_alloc_bytes",
+          "refId": "A",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "rate(go_memstats_alloc_bytes_total{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[30s])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_alloc_bytes_total - {{pod_name}}",
+          "metric": "go_memstats_alloc_bytes_total",
+          "refId": "B",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "go_memstats_stack_inuse_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_stack_inuse_bytes - {{pod_name}}",
+          "metric": "go_memstats_stack_inuse_bytes",
+          "refId": "C",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "go_memstats_heap_inuse_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "hide": false,
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_heap_inuse_bytes - {{pod_name}}",
+          "metric": "go_memstats_heap_inuse_bytes",
+          "refId": "D",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "go memstats",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "Bps",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 49
+      },
+      "hiddenSeries": false,
+      "id": 5,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "alloc rate",
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "deriv(go_memstats_alloc_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_alloc_bytes - {{pod_name}}",
+          "metric": "go_memstats_alloc_bytes",
+          "range": true,
+          "refId": "A",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "rate(go_memstats_alloc_bytes_total{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_alloc_bytes_total - {{pod_name}}",
+          "metric": "go_memstats_alloc_bytes_total",
+          "range": true,
+          "refId": "B",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "deriv(go_memstats_stack_inuse_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_stack_inuse_bytes - {{pod_name}}",
+          "metric": "go_memstats_stack_inuse_bytes",
+          "range": true,
+          "refId": "C",
+          "step": 4
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "deriv(go_memstats_heap_inuse_bytes{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "hide": false,
+          "intervalFactor": 2,
+          "legendFormat": "go_memstats_heap_inuse_bytes - {{pod_name}}",
+          "metric": "go_memstats_heap_inuse_bytes",
+          "range": true,
+          "refId": "D",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "go memstats deriv",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "Bps",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 56
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "expr": "process_open_fds{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_open_fds - {{pod_name}}",
+          "metric": "process_open_fds",
+          "refId": "A",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "open fds",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "2NGL3Ah4z"
+      },
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 56
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "2NGL3Ah4z"
+          },
+          "editorMode": "code",
+          "expr": "deriv(process_open_fds{job=~\"^($cluster)$\",container_name=~\"^($component)$\",pod_name=~\"^($pod)$\"}[$interval])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "process_open_fds - {{pod_name}}",
+          "metric": "process_open_fds",
+          "range": true,
+          "refId": "A",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "open fds deriv",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
           "logBase": 1,
           "show": true
         },
@@ -1100,13 +1844,10 @@
       }
     }
   ],
-  "refresh": "5s",
+  "refresh": "30s",
   "schemaVersion": 37,
   "style": "dark",
-  "tags": [
-    "go",
-    "golang"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
@@ -1119,7 +1860,7 @@
           "type": "prometheus",
           "uid": "2NGL3Ah4z"
         },
-        "definition": "label_values(go_memstats_stack_inuse_bytes, job)",
+        "definition": "label_values(go_goroutines, job)",
         "hide": 0,
         "includeAll": false,
         "label": "Cluster",
@@ -1127,7 +1868,7 @@
         "name": "cluster",
         "options": [],
         "query": {
-          "query": "label_values(go_memstats_stack_inuse_bytes, job)",
+          "query": "label_values(go_goroutines, job)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -1140,23 +1881,17 @@
         "current": {
           "selected": true,
           "text": [
-            "controller",
-            "store",
-            "timer",
-            "trigger"
+            "controller"
           ],
           "value": [
-            "controller",
-            "store",
-            "timer",
-            "trigger"
+            "controller"
           ]
         },
         "datasource": {
           "type": "prometheus",
           "uid": "2NGL3Ah4z"
         },
-        "definition": "label_values(go_memstats_stack_inuse_bytes{job=\"$cluster\"}, container_name)",
+        "definition": "label_values(go_goroutines{job=\"$cluster\"}, container_name)",
         "hide": 0,
         "includeAll": false,
         "label": "Component",
@@ -1164,7 +1899,7 @@
         "name": "component",
         "options": [],
         "query": {
-          "query": "label_values(go_memstats_stack_inuse_bytes{job=\"$cluster\"}, container_name)",
+          "query": "label_values(go_goroutines{job=\"$cluster\"}, container_name)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -1175,35 +1910,87 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "vanus-controller-0",
-          "value": "vanus-controller-0"
+          "selected": true,
+          "text": [
+            "vanus-controller-0",
+            "vanus-controller-1",
+            "vanus-controller-2"
+          ],
+          "value": [
+            "vanus-controller-0",
+            "vanus-controller-1",
+            "vanus-controller-2"
+          ]
         },
         "datasource": {
           "type": "prometheus",
           "uid": "2NGL3Ah4z"
         },
-        "definition": "label_values(go_memstats_stack_inuse_bytes{job=\"$cluster\", container_name=~\"$component\"}, pod_name)",
+        "definition": "label_values(go_goroutines{job=\"$cluster\", container_name=~\"$component\"}, pod_name)",
         "hide": 0,
         "includeAll": false,
         "label": "Pod",
-        "multi": false,
+        "multi": true,
         "name": "pod",
         "options": [],
         "query": {
-          "query": "label_values(go_memstats_stack_inuse_bytes{job=\"$cluster\", container_name=~\"$component\"}, pod_name)",
+          "query": "label_values(go_goroutines{job=\"$cluster\", container_name=~\"$component\"}, pod_name)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 1,
         "type": "query"
+      },
+      {
+        "auto": false,
+        "auto_count": 30,
+        "auto_min": "10s",
+        "current": {
+          "selected": false,
+          "text": "10m",
+          "value": "10m"
+        },
+        "hide": 0,
+        "name": "interval",
+        "options": [
+          {
+            "selected": false,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": false,
+            "text": "5m",
+            "value": "5m"
+          },
+          {
+            "selected": true,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          }
+        ],
+        "query": "1m,5m,10m,30m,1h",
+        "queryValue": "",
+        "refresh": 2,
+        "skipUrlSync": false,
+        "type": "interval"
       }
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1231,9 +2018,9 @@
       "30d"
     ]
   },
-  "timezone": "",
-  "title": "Pod - Go Runtime",
-  "uid": "CgCw8jKZw1",
+  "timezone": "browser",
+  "title": "Go Runtime",
+  "uid": "1ypFZFgvma",
   "version": 2,
   "weekStart": ""
 }

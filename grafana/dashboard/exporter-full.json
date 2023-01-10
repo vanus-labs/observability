@@ -26,7 +26,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 1860,
   "graphTooltip": 0,
-  "id": 22,
   "links": [
     {
       "icon": "external link",
@@ -138,7 +137,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -223,7 +222,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -306,7 +305,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -380,7 +379,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -475,7 +474,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -556,7 +555,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -635,7 +634,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -717,7 +716,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -800,7 +799,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -881,7 +880,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -960,7 +959,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -23042,8 +23041,8 @@
       {
         "current": {
           "selected": false,
-          "text": "172.16.0.12:9100",
-          "value": "172.16.0.12:9100"
+          "text": "172.16.0.14:9100",
+          "value": "172.16.0.14:9100"
         },
         "datasource": {
           "type": "prometheus",
@@ -23092,9 +23091,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "vanus-trigger-7d5dc789d4-fzfgr",
-          "value": "vanus-trigger-7d5dc789d4-fzfgr"
+          "selected": true,
+          "text": "vanus-controller-0",
+          "value": "vanus-controller-0"
         },
         "datasource": {
           "type": "prometheus",
@@ -23114,7 +23113,7 @@
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 1,
         "type": "query"
       }
     ]
@@ -23151,6 +23150,6 @@
   "timezone": "browser",
   "title": "Node Exporter - Full",
   "uid": "rYdddlPWk",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
