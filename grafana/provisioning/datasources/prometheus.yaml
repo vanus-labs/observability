@@ -2,50 +2,26 @@ apiVersion: 1
 
 # list of datasources that should be deleted from the database
 deleteDatasources:
-  - name: vanus-promethes
+  - name: vanus-prometheus
     orgId: 1
 
 # list of datasources to insert/update depending
 # what's available in the database
 datasources:
   # <string, required> name of the datasource. Required
-  - name: vanus-promethes
-    # <string, required> datasource type. Required
-    type: prometheus
-    # <string, required> access mode. proxy or direct (Server or Browser in the UI). Required
-    access: proxy
-    # <int> org id. will default to orgId 1 if not specified
+  - id: 1
+    uid: 2NGL3Ah4z
     orgId: 1
-    # <string> custom UID which can be used to reference this datasource in other parts of the configuration, if not specified will be generated automatically
-    uid: JzJG2HmVz
-    # <string> url
-    url: http://vanus-prometheus:9090
-    # <string> database user, if used
-#    user:
-    # <string> database name, if used
-#    database:
-    # <bool> enable/disable basic auth
-#    basicAuth:
-    # <string> basic auth username
-#    basicAuthUser:
-    # <bool> enable/disable with credentials headers
-#    withCredentials:
-    # <bool> mark as default datasource. Max one per org
-#    isDefault:
-    # <map> fields that will be converted to json and stored in jsonData
-#    jsonData:
-#      graphiteVersion: '1.1'
-#      tlsAuth: true
-#      tlsAuthWithCACert: true
-    # <string> json object of data that will be encrypted.
-#    secureJsonData:
-#      tlsCACert: '...'
-#      tlsClientCert: '...'
-#      tlsClientKey: '...'
-      # <string> database password, if used
-#      password:
-      # <string> basic auth password
-#      basicAuthPassword:
-    version: 1
-    # <bool> allow users to edit datasources from the UI.
-    editable: false
+    name: vanus-prometheus
+    type: prometheus
+    typeName: Prometheus
+    typeLogoUrl: public/app/plugins/datasource/prometheus/img/prometheus_logo.svg
+    access: proxy
+    url: 'http://prometheus.monitoring:9090'
+    user: ''
+    database: ''
+    basicAuth: false
+    isDefault: true
+    jsonData:
+      httpMethod: POST
+    readOnly: true
