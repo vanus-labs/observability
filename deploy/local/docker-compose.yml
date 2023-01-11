@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  prometheus:
+    container_name: prometheus
+    hostname: prometheus.monitoring # TODO change to vanus
+    image: "prom/prometheus"
+    ports:
+      - "9090:9090"
+    volumes:
+      - .:/etc/prometheus
+  grafana:
+    container_name: grafana
+    hostname: grafana
+    image: "public.ecr.aws/vanus/observability/grafana:latest"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
