@@ -118,7 +118,7 @@ Sometimes, it's needed to write query with variables, you can find that how to u
 ![options.png](images/options-of-panel.png)
 
 #### Result
-After we finished those steps, we can get a new panel in our dashboard.
+After we finished those steps, we got a new panel in Cluster dashboard.
 ![latency-panel.png](images/latency-panel.png)
 
 #### Save configuration
