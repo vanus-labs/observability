@@ -2,15 +2,21 @@
 
 The Observability infra for Vanus.
 
+**The Vanus version is required > v0.6**
+
 ## How to use
 
+1. Install
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/linkall-labs/observability/main/deploy/all-in-one.yam
+```
 
+2. Ensure network accessible
+```shell
 kubectl port-forward service/grafana 3000:3000 -n vanus
 ```
 
-open `localhost:3000` in your browser.
+Open `localhost:3000` in your browser(default user and password is `admin`)
 
 ![dashboard](images/dashboard.png)
 
