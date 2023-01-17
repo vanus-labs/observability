@@ -691,39 +691,11 @@
               {
                 "color": "green",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
         },
         "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "sum - host.docker.internal:2113"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          },
           {
             "matcher": {
               "id": "byName",
@@ -772,8 +744,8 @@
             "uid": "2NGL3Ah4z"
           },
           "editorMode": "builder",
-          "expr": "rate(vanus_gateway_send_event_request_latency_summary_count[1m])",
-          "legendFormat": "sum - {{instance}}",
+          "expr": "rate(vanus_gateway_event_received_total[1m])",
+          "legendFormat": "Sum",
           "range": true,
           "refId": "A"
         }
@@ -952,8 +924,8 @@
       {
         "current": {
           "selected": false,
-          "text": "host.docker.internal:2112",
-          "value": "host.docker.internal:2112"
+          "text": "172.16.0.17:2112",
+          "value": "172.16.0.17:2112"
         },
         "datasource": {
           "type": "prometheus",

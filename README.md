@@ -141,3 +141,5 @@ git push origin <your branch>
 
 ### Label Consideration
 Coming soon.
+
+## How Vanus observability works in Kubernetes
