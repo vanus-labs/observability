@@ -8,7 +8,7 @@ The Observability infra for Vanus.
 
 1. Install
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/linkall-labs/observability/main/deploy/all-in-one.yam
+kubectl apply -f https://raw.githubusercontent.com/linkall-labs/observability/main/deploy/all-in-one.yaml
 ```
 
 2. Ensure network accessible
